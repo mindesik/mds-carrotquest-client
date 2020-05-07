@@ -8,7 +8,10 @@ class Users extends Resource {
    */
   get(id, query) {
     return this.callResult(_ => {
-      let searchParams = this.searchParams(query)
+      let searchParams = this.searchParams({
+        id_as_string: true,
+        ...query,
+      })
       
       return this.client.get(`/users/${id}?${searchParams.toString()}`)
     })
@@ -21,7 +24,10 @@ class Users extends Resource {
    */
   events(id, query) {
     return this.callResult(_ => {
-      let searchParams = this.searchParams(query)
+      let searchParams = this.searchParams({
+        id_as_string: true,
+        ...query,
+      })
       
       return this.client.get(`/users/${id}/events?${searchParams.toString()}`)
     })
@@ -34,7 +40,10 @@ class Users extends Resource {
    */
   conversations(id, query) {
     return this.callResult(_ => {
-      let searchParams = this.searchParams(query)
+      let searchParams = this.searchParams({
+        id_as_string: true,
+        ...query,
+      })
       
       return this.client.get(`/users/${id}/conversations?${searchParams.toString()}`)
     })
@@ -51,7 +60,10 @@ class Users extends Resource {
         query.params = JSON.stringify(query.params)
       }
       
-      let searchParams = this.searchParams(query)
+      let searchParams = this.searchParams({
+        id_as_string: true,
+        ...query,
+      })
       
       return this.client.post(`/users/${id}/events?${searchParams.toString()}`)
     })
@@ -68,7 +80,10 @@ class Users extends Resource {
         query.operations = JSON.stringify(query.operations)
       }
       
-      let searchParams = this.searchParams(query)
+      let searchParams = this.searchParams({
+        id_as_string: true,
+        ...query,
+      })
       
       return this.client.post(`/users/${id}/props?${searchParams.toString()}`)
     })
@@ -81,7 +96,10 @@ class Users extends Resource {
    */
   setPresence(id, query) {
     return this.callResult(_ => {
-      let searchParams = this.searchParams(query)
+      let searchParams = this.searchParams({
+        id_as_string: true,
+        ...query,
+      })
       
       return this.client.post(`/users/${id}/setpresence?${searchParams.toString()}`)
     })
@@ -94,7 +112,10 @@ class Users extends Resource {
    */
   sendMessage(id, query) {
     return this.callResult(_ => {
-      let searchParams = this.searchParams(query)
+      let searchParams = this.searchParams({
+        id_as_string: true,
+        ...query,
+      })
       
       return this.client.post(`/users/${id}/sendmessage?${searchParams.toString()}`)
     })
@@ -107,7 +128,10 @@ class Users extends Resource {
    */
   startConversation(id, query) {
     return this.callResult(_ => {
-      let searchParams = this.searchParams(query)
+      let searchParams = this.searchParams({
+        id_as_string: true,
+        ...query,
+      })
       
       return this.client.post(`/users/${id}/startconversation?${searchParams.toString()}`)
     })
@@ -120,7 +144,10 @@ class Users extends Resource {
    */
   unsubscribeEmail(id, query) {
     return this.callResult(_ => {
-      let searchParams = this.searchParams(query)
+      let searchParams = this.searchParams({
+        id_as_string: true,
+        ...query,
+      })
       
       return this.client.post(`/users/${id}/unsubscribeemail?${searchParams.toString()}`)
     })
