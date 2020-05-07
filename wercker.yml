@@ -13,7 +13,7 @@ test:
   steps:
     - script:
       name: add token
-      code: echo $INTERCOM_TOKEN >> .env
+      code: echo $API_KEY >> .env
     - script:
       name: test
       code: yarn test
