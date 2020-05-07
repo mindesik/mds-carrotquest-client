@@ -9,9 +9,6 @@ build-and-test:
         name: install dependencies
         code: yarn install
     - script:
-      name: add token
-      code: echo $API_KEY >> .env
-    - script:
       name: test
       code: yarn test
 
