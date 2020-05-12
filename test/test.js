@@ -69,7 +69,7 @@ describe('Users', function () {
   })
   
   it('should create user event', function(done) {
-    client.users.postEvent(userId, {
+    client.users.createEvent(userId, {
       event: 'TEST EVENT',
       params: {
         foo: 'bar',
@@ -81,15 +81,20 @@ describe('Users', function () {
   })
   
   it('should set user props', function(done) {
-    client.users.postProps(userId, {
+    client.users.setProps(userId, {
       operations: [{
         key: '$phone',
         value: Date.now(),
-        op: 'update_or_create'
+        op: 'update_or_create',
+      }, {
+        key: '$name',
+        value: `Test ${Date.now()}`,
+        op: 'update_or_create',
       }]
     }).then(response => {
       assert.equal(response.meta.status, 200)
-      assert.equal(response.meta.affected_props.indexOf('$phone'), 0)
+      assert.notEqual(response.meta.affected_props.indexOf('$phone'), -1)
+      assert.notEqual(response.meta.affected_props.indexOf('$name'), -1)
       done()
     }).catch(done)
   })

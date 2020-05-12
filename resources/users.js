@@ -54,7 +54,7 @@ class Users extends Resource {
    * @param {String} id 
    * @param {Object} query 
    */
-  postEvent(id, query) {
+  createEvent(id, query) {
     return this.callResult(_ => {
       if (query.params) {
         query.params = JSON.stringify(query.params)
@@ -74,7 +74,7 @@ class Users extends Resource {
    * @param {String} id 
    * @param {Object} query 
    */
-  postProps(id, query) {
+  setProps(id, query) {
     return this.callResult(_ => {
       if (query.operations) {
         query.operations = JSON.stringify(query.operations)

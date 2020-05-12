@@ -26,6 +26,163 @@ client.apps.users().then(users => {
 
 ## Methods
 
+### Get active users
+
+```javascript
+client.apps.activeUsers()
+```
+
+---
+
+### Get app users
+
+```javascript
+client.apps.users(query)
+```
+
+|Parameter|Type|
+|---|---|
+|query|Object|
+
+---
+
+### Get conversations
+
+```javascript
+client.apps.conversations(query)
+```
+
+|Parameter|Type|
+|---|---|
+|query|Object|
+
+---
+
+### Get app channels
+
+```javascript
+client.apps.channels()
+```
+
+---
+
+### Get user
+
+```javascript
+client.users.get(id, query)
+```
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+---
+
+### Get user events
+
+```javascript
+client.users.events(id, query)
+```
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+---
+
+### Get user conversations
+
+```javascript
+client.users.conversations(id, query)
+```
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+---
+
+### Create user event
+
+```javascript
+client.users.createEvent(id, query)
+```
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+---
+
+### Set user props
+
+```javascript
+client.users.setProps(id, query)
+```
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+---
+
+### Set user presence
+
+```javascript
+client.users.setPresence(id, query)
+```
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+---
+
+### Send a message to user
+
+```javascript
+client.users.sendMessage(id, query)
+```
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+---
+
+### Start a conversation with user
+
+```javascript
+client.users.startConversation(id, query)
+```
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+---
+
+### Unsubscribe user email
+
+```javascript
+client.users.unsubscribeEmail(id, query)
+```
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+## Testing
+
 Create `.env` file with your Carrot Quest API key and run `yarn test`:
 
 ```
