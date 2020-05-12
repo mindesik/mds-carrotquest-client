@@ -26,131 +26,155 @@ client.apps.users().then(users => {
 
 ## Methods
 
+Get active users
+
 ```javascript
 client.apps.activeUsers()
 ```
 
-Get active users
+---
+
+Get app users
 
 ```javascript
 client.apps.users(query)
 ```
 
-Get app users
-
 |Parameter|Type|
 |---|---|
 |query|Object|
+
+---
+
+Get conversations
 
 ```javascript
 client.apps.conversations(query)
 ```
 
-Get conversations
-
 |Parameter|Type|
 |---|---|
 |query|Object|
+
+---
+
+Get app channels
 
 ```javascript
 client.apps.channels()
 ```
 
-Get app channels
+---
+
+Get user
 
 ```javascript
 client.users.get(id, query)
 ```
 
-Get user
-
 |Parameter|Type|
 |---|---|
 |id|String|
 |query|Object|
+
+---
+
+Get user events
 
 ```javascript
 client.users.events(id, query)
 ```
 
-Get user events
-
 |Parameter|Type|
 |---|---|
 |id|String|
 |query|Object|
+
+---
+
+Get user conversations
 
 ```javascript
 client.users.conversations(id, query)
 ```
 
-Get user conversations
-
 |Parameter|Type|
 |---|---|
 |id|String|
 |query|Object|
+
+---
+
+Create user event
 
 ```javascript
 client.users.createEvent(id, query)
 ```
 
-Create user event
-
 |Parameter|Type|
 |---|---|
 |id|String|
 |query|Object|
+
+---
+
+Set user props
 
 ```javascript
 client.users.setProps(id, query)
 ```
 
-Set user props
-
 |Parameter|Type|
 |---|---|
 |id|String|
 |query|Object|
+
+---
+
+Set user presence
 
 ```javascript
 client.users.setPresence(id, query)
 ```
 
-Set user presence
-
 |Parameter|Type|
 |---|---|
 |id|String|
 |query|Object|
+
+---
+
+Send a message to user
 
 ```javascript
 client.users.sendMessage(id, query)
 ```
 
-Send a message to user
-
 |Parameter|Type|
 |---|---|
 |id|String|
 |query|Object|
+
+---
+
+Start a conversation with user
 
 ```javascript
 client.users.startConversation(id, query)
 ```
 
-Start a conversation with user
-
 |Parameter|Type|
 |---|---|
 |id|String|
 |query|Object|
 
+---
+
+Unsubscribe user email
+
 ```javascript
 client.users.unsubscribeEmail(id, query)
 ```
-
-Unsubscribe user email
 
 |Parameter|Type|
 |---|---|
