@@ -26,6 +26,113 @@ client.apps.users().then(users => {
 
 ## Methods
 
+### apps.activeUsers
+
+Get active users
+
+### apps.users
+
+Get app users
+
+|Parameter|Type|
+|---|---|
+|query|Object|
+
+### apps.conversations
+
+Get conversations
+
+|Parameter|Type|
+|---|---|
+|query|Object|
+
+### apps.channels
+
+Get app channels
+
+### users.get
+
+Get user
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+### users.events
+
+Get user events
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+### users.conversations
+
+Get user conversations
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+### users.createEvent
+
+Create user event
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+### users.setProps
+
+Set user props
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+### users.setPresence
+
+Set user presence
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+### users.sendMessage
+
+Send a message to user
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+### users.startConversation
+
+Start a conversation with user
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+### users.unsubscribeEmail
+
+Unsubscribe user email
+
+|Parameter|Type|
+|---|---|
+|id|String|
+|query|Object|
+
+## Testing
+
 Create `.env` file with your Carrot Quest API key and run `yarn test`:
 
 ```
