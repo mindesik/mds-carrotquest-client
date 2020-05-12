@@ -69,7 +69,7 @@ describe('Users', function () {
   })
   
   it('should create user event', function(done) {
-    client.users.postEvent(userId, {
+    client.users.createEvent(userId, {
       event: 'TEST EVENT',
       params: {
         foo: 'bar',
@@ -81,7 +81,7 @@ describe('Users', function () {
   })
   
   it('should set user props', function(done) {
-    client.users.postProps(userId, {
+    client.users.setProps(userId, {
       operations: [{
         key: '$phone',
         value: Date.now(),
