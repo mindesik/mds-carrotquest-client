@@ -28,7 +28,8 @@ class Resource {
       promise().then(response => {
         resolve(response.data)
       }).catch(err => {
-        reject(err.response.data)
+        console.error(err)
+        reject(err.response)
       })
     })
   }
