@@ -1,8 +1,8 @@
 # mds-carrotquest-client
 
-[![wercker status](https://app.wercker.com/status/e3afc14c8ba4e0ce2177d8ede8fea510/s/ "wercker status")](https://app.wercker.com/project/byKey/e3afc14c8ba4e0ce2177d8ede8fea510)
-
 Simple carrotquest.io client with Promises for nodejs.
+
+[![production](https://github.com/mindesik/mds-carrotquest-client/actions/workflows/production.yml/badge.svg)](https://github.com/mindesik/mds-carrotquest-client/actions/workflows/production.yml)
 
 Carrot quest web api documentation: https://carrotquest.io/developers/webapi/
 
