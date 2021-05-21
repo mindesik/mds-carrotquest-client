@@ -2,7 +2,7 @@
 
 Simple carrotquest.io client with Promises for nodejs.
 
-[![production](https://github.com/mindesik/mds-carrotquest-client/actions/workflows/production.yml/badge.svg)](https://github.com/mindesik/mds-carrotquest-client/actions/workflows/production.yml)
+[![test](https://github.com/mindesik/mds-carrotquest-client/actions/workflows/test.yml/badge.svg?event=check_suite)](https://github.com/mindesik/mds-carrotquest-client/actions/workflows/test.yml)
 
 Carrot quest web api documentation: https://carrotquest.io/developers/webapi/
 
