@@ -1,0 +1,35 @@
+module.exports = {
+  rules: {
+    'no-trailing-spaces': ['error'],
+    'no-undef': ['error'],
+    'no-unused-vars': [
+      'error',
+      { argsIgnorePattern: '^_|ctx|req|res|next|queryInterface|Sequelize|DataTypes', varsIgnorePattern: '^_' },
+    ],
+    'no-multiple-empty-lines': ['error'],
+    'object-curly-spacing': ['error', 'always'],
+    'object-shorthand': 'error',
+    quotes: ['error', 'single'],
+    indent: ['error', 2],
+    'comma-dangle': ['error', 'always-multiline'],
+    'array-element-newline': ['error', 'consistent'],
+    'space-infix-ops': ['error', { int32Hint: false }],
+    'comma-spacing': ['error', { before: false, after: true }],
+    'key-spacing': ['warn', { 'beforeColon': false, 'afterColon': true }],
+    'keyword-spacing': ['error'],
+    'space-before-blocks': ['error'],
+    'eol-last': ['warn'],
+    semi: ['warn', 'never'],
+  },
+  env: {
+    es6: true,
+    node: true,
+    commonjs: true,
+    jest: true,
+  },
+  plugins: ['jest'],
+  extends: ['eslint:recommended'],
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
+}

@@ -5,8 +5,8 @@ const Conversations = require('./resources/conversations')
 
 class CarrotQuest {
   /**
-   * 
-   * @param {String} apiKey 
+   *
+   * @param {String} apiKey
    * @param {String} baseURL
    * @param {Number} timeout
    */
@@ -18,9 +18,9 @@ class CarrotQuest {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-      }
+      },
     })
-    
+
     this.apps = new Apps(this.client, this.apiKey)
     this.users = new Users(this.client, this.apiKey)
     this.conversations = new Conversations(this.client, this.apiKey)

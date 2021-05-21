@@ -1,0 +1,30 @@
+name: test
+on:
+  push:
+    branches: ['*']
+    tags-ignore:
+      - '*'
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node: [10.x, 12.x, 14.x, 16.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install dependencies
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: yarn install
+      - name: Lint
+        run: yarn eslint ./
+      - name: Test
+        run: yarn test
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage
