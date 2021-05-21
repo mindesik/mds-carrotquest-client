@@ -1,4 +1,6 @@
-/wercker.yml
-/.env
-/.npmrc
-/wercker.yml
+.env
+.npmrc
+.vscode
+.github
+coverage
+node_modules
