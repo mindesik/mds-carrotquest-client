@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        node: [10.x, 12.x, 14.x, 16.x]
+        node: [16.x]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -21,11 +21,6 @@ jobs:
         run: yarn eslint ./
       - name: Run tests
         run: yarn test
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: coverage
-          path: coverage
   
   publish:
     environment: production
